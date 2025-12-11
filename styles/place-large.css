@@ -1,0 +1,93 @@
+/* Large Screen Styles - Desktop View */
+@media (min-width: 800px) {
+    
+    /* Increase padding for larger screens */
+    main {
+        padding: var(--spacing-lg);
+    }
+    
+    header {
+        padding: var(--spacing-lg);
+    }
+    
+    header h1 {
+        font-size: 3rem;
+    }
+    
+    /* Info Grid - Desktop Layout */
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+    
+    /* Intro Section - Larger text */
+    .intro {
+        padding: var(--spacing-lg);
+    }
+    
+    .intro h2 {
+        font-size: 2.5rem;
+    }
+    
+    .intro p {
+        font-size: 1.15rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    /* Info Cards - Enhanced padding */
+    .info-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .info-card h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Weather Card - Desktop View Changes */
+    /* Hide SVG weather icon in desktop view */
+    .weather-icon-container {
+        display: none;
+    }
+    
+    /* Add pseudo-element emoticon after Weather heading */
+    .weather h2::after {
+        content: " ⛅";
+        font-size: 1.5em;
+        margin-left: 0.3em;
+        vertical-align: middle;
+    }
+    
+    .weather-details {
+        font-size: 1.05rem;
+    }
+    
+    /* Navigation - Larger spacing */
+    nav a {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    /* Footer - Larger text */
+    footer {
+        padding: var(--spacing-lg);
+    }
+    
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1200px) {
+    
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Make attractions and culture span full width for better layout */
+    .attractions,
+    .culture {
+        grid-column: span 1;
+    }
+}

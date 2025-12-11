@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the beautiful country of Japan - its culture, attractions, and weather information">
+    <meta name="author" content="Your Name">
+    <title>Japan - Country Page</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>🇯🇵 Japan</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="temples.html">Temples</a>
+            <a href="place.html" class="active">Place</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section with responsive images -->
+        <section class="hero">
+            <!-- Note: Convert SVG to WebP using online tools or image editors -->
+            <!-- For now using SVG for demonstration - replace with WebP versions -->
+            <picture>
+                <source srcset="images/mount fuji.jpg" media="(min-width: 800px)">
+                <img src="images/mount fuji.jpg" 
+                     alt="Mount Fuji with cherry blossoms in the foreground"
+                     width="1200" 
+                     height="600">
+            </picture>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="intro">
+            <h2>Welcome to Japan</h2>
+            <p>Japan is an island nation in East Asia, known for its unique blend of ancient traditions and cutting-edge technology. From serene temples to bustling cities, Japan offers an unforgettable experience for every traveler.</p>
+        </section>
+
+        <!-- Information Grid -->
+        <div class="info-grid">
+            <!-- General Information -->
+            <section class="info-card general">
+                <h2>General Information</h2>
+                <ul>
+                    <li><strong>Capital:</strong> Tokyo</li>
+                    <li><strong>Population:</strong> 125.7 million</li>
+                    <li><strong>Language:</strong> Japanese</li>
+                    <li><strong>Currency:</strong> Japanese Yen (¥)</li>
+                    <li><strong>Area:</strong> 377,975 km²</li>
+                </ul>
+            </section>
+
+            <!-- Weather Section -->
+            <section class="info-card weather">
+                <h2>Weather</h2>
+                <div class="weather-icon-container">
+                    <img src="images/weather-icon.svg" 
+                         alt="Partly cloudy weather icon" 
+                         class="weather-icon-svg">
+                </div>
+                <div class="weather-details">
+                    <p><strong>Temperature:</strong> <span id="temperature">15</span>°C</p>
+                    <p><strong>Conditions:</strong> Partly Cloudy</p>
+                    <p><strong>Wind Speed:</strong> <span id="windspeed">10</span> km/h</p>
+                    <p><strong>Wind Chill:</strong> <span id="windchill">N/A</span></p>
+                </div>
+            </section>
+
+            <!-- Top Attractions -->
+            <section class="info-card attractions">
+                <h2>Top Attractions</h2>
+                <ul>
+                    <li>Mount Fuji - Japan's iconic sacred mountain</li>
+                    <li>Fushimi Inari Shrine - Famous for thousands of vermillion torii gates</li>
+                    <li>Tokyo Tower - Symbol of Japan's modern era</li>
+                    <li>Hiroshima Peace Memorial - Historic WWII monument</li>
+                    <li>Kyoto's Golden Pavilion - Stunning Zen Buddhist temple</li>
+                </ul>
+            </section>
+
+            <!-- Culture -->
+            <section class="info-card culture">
+                <h2>Culture & Traditions</h2>
+                <p>Japanese culture is renowned worldwide for its rich traditions including:</p>
+                <ul>
+                    <li>Tea Ceremony (Chanoyu)</li>
+                    <li>Cherry Blossom Viewing (Hanami)</li>
+                    <li>Traditional Arts (Ikebana, Calligraphy)</li>
+                    <li>Martial Arts (Judo, Kendo, Aikido)</li>
+                    <li>Traditional Theatre (Kabuki, Noh)</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Japan Travel Guide</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
