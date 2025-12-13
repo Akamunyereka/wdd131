@@ -1,0 +1,585 @@
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* BYU-Idaho Brand Colors */
+    --primary-color: #006eb6;
+    --primary-dark: #004e85;
+    --secondary-color: #0077c8;
+    --accent-color: #f7941e;
+    --text-dark: #212529;
+    --text-light: #6c757d;
+    --background: #ffffff;
+    --background-alt: #f8f9fa;
+    --border-color: #dee2e6;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Typography */
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-size-base: 1rem;
+    --line-height-base: 1.6;
+    
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--text-dark);
+    background-color: var(--background);
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    border-radius: 50%;
+    background-color: white;
+    padding: var(--spacing-xs);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: var(--primary-dark);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--primary-color);
+    outline: 2px solid var(--accent-color);
+    outline-offset: -2px;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+}
+
+.project-overview {
+    background-color: var(--background);
+}
+
+.project-overview > h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 3px solid var(--accent-color);
+}
+
+/* Section Styles */
+section {
+    margin-bottom: var(--spacing-xl);
+}
+
+section h3 {
+    font-size: 1.75rem;
+    color: var(--primary-dark);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+}
+
+section h3::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 1.5rem;
+    background-color: var(--accent-color);
+    margin-right: var(--spacing-sm);
+}
+
+section p {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-dark);
+}
+
+.emphasis {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+/* Note and Warning Boxes */
+.note,
+.warning {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin: var(--spacing-md) 0;
+    border-left: 4px solid;
+}
+
+.note {
+    background-color: #e7f3ff;
+    border-color: var(--info);
+}
+
+.note strong {
+    color: var(--info);
+}
+
+.warning {
+    background-color: #fff3cd;
+    border-color: var(--warning);
+}
+
+.warning strong {
+    color: #856404;
+}
+
+/* Requirements List */
+.requirements-list {
+    list-style: none;
+    counter-reset: requirement-counter;
+}
+
+.requirements-list > li {
+    counter-increment: requirement-counter;
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.7;
+}
+
+.requirements-list > li::before {
+    content: counter(requirement-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--primary-color);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.sub-note {
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background-color: var(--background-alt);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+}
+
+.audit-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.audit-link:hover {
+    color: var(--primary-dark);
+}
+
+/* JavaScript Requirements List */
+.javascript-requirements {
+    list-style: none;
+    margin-top: var(--spacing-sm);
+}
+
+.javascript-requirements li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.javascript-requirements li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: bold;
+}
+
+/* Testing and Submission Lists */
+.testing ul,
+.submission ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.testing li,
+.submission li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.7;
+}
+
+.testing li::before,
+.submission li::before {
+    content: '▸';
+    position: absolute;
+    left: 0.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Code Elements */
+code {
+    background-color: var(--background-alt);
+    padding: 0.2rem 0.4rem;
+    border-radius: var(--radius-sm);
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    color: var(--danger);
+}
+
+strong {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+/* Rubric Section */
+.rubric {
+    background-color: var(--background-alt);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.rubric > h3 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.rubric-item {
+    background-color: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.3s ease;
+}
+
+.rubric-item:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.rubric-item h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.points {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.rubric-desc {
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+}
+
+.rubric-levels {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.level {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border-left: 4px solid;
+    background-color: var(--background-alt);
+    font-size: 0.95rem;
+}
+
+.level.complete {
+    border-color: var(--success);
+    background-color: #d4edda;
+}
+
+.level.proficient {
+    border-color: var(--info);
+    background-color: #d1ecf1;
+}
+
+.level.developing {
+    border-color: var(--warning);
+    background-color: #fff3cd;
+}
+
+.level.beginning {
+    border-color: var(--accent-color);
+    background-color: #ffe8cc;
+}
+
+.level.partial {
+    border-color: var(--info);
+    background-color: #e7f3ff;
+}
+
+.level.incomplete {
+    border-color: var(--danger);
+    background-color: #f8d7da;
+}
+
+.total-points {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--background);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--radius-md);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design - Tablet */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.25rem;
+    }
+    
+    .header-content {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    nav ul {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    nav a {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+    
+    main {
+        padding: var(--spacing-md);
+    }
+    
+    .project-overview > h2 {
+        font-size: 2rem;
+    }
+    
+    section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .requirements-list > li {
+        padding-left: 2.5rem;
+    }
+    
+    .requirements-list > li::before {
+        width: 1.75rem;
+        height: 1.75rem;
+        font-size: 0.85rem;
+    }
+    
+    .rubric {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Responsive Design - Mobile */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1rem;
+    }
+    
+    .header-content {
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+    }
+    
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    nav ul {
+        justify-content: space-around;
+        padding: 0;
+    }
+    
+    nav a {
+        padding: var(--spacing-xs);
+        font-size: 0.85rem;
+    }
+    
+    main {
+        padding: var(--spacing-sm);
+    }
+    
+    .project-overview > h2 {
+        font-size: 1.75rem;
+    }
+    
+    section h3 {
+        font-size: 1.25rem;
+    }
+    
+    .requirements-list > li {
+        padding-left: 2rem;
+        font-size: 0.95rem;
+    }
+    
+    .requirements-list > li::before {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.75rem;
+    }
+    
+    .rubric-item h4 {
+        font-size: 1.1rem;
+    }
+    
+    .level {
+        font-size: 0.9rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .total-points {
+        font-size: 1.25rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    header,
+    nav,
+    footer {
+        display: none;
+    }
+    
+    main {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .rubric-item {
+        page-break-inside: avoid;
+    }
+    
+    a {
+        text-decoration: none;
+        color: var(--text-dark);
+    }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus Styles for Keyboard Navigation */
+a:focus,
+button:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #0056b3;
+        --text-dark: #000000;
+        --border-color: #000000;
+    }
+}
