@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover Uganda — the Pearl of Africa. Learn about its culture, weather, and geography.">
+  <meta name="author" content="Kevin Akamunyereka">
+  <title>Uganda | The Pearl of Africa</title>
+
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Uganda</h1>
+    <p class="subtitle">The Pearl of Africa</p>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <picture>
+        <source srcset="images/uganda-small.jfif" media="(max-width: 600px)">
+        <source srcset="images/uganda-medium.jfif" media="(max-width: 1000px)">
+        <img src="images/uganda-large.jfif" alt="Landscape view of Uganda" width="1200" height="600">
+      </picture>
+    </section>
+    
+    <!-- GRID SECTION -->
+    <section class="grid">
+
+      <!-- COUNTRY DATA -->
+      <section class="card data">
+        <h2>About Uganda</h2>
+        <ul>
+          <li><strong>Capital:</strong> Kampala</li>
+          <li><strong>Population:</strong> ~48 million</li>
+          <li><strong>Official Language:</strong> English</li>
+          <li><strong>Currency:</strong> Ugandan Shilling (UGX)</li>
+          <li><strong>Region:</strong> East Africa</li>
+        </ul>
+      </section>
+
+      <!-- WEATHER -->
+      <section class="card weather">
+        <h2>Weather</h2>
+
+        <!-- SVG icon (mobile only) -->
+        <img src="images/weather.svg" alt="Weather icon" class="weather-icon">
+
+        <p><strong>Temperature:</strong> <span id="temp">28</span>°C</p>
+        <p><strong>Wind Speed:</strong> <span id="wind">10</span> km/h</p>
+        <p><strong>Conditions:</strong> Partly Cloudy</p>
+        <p><strong>Wind Chill:</strong> <span id="windchill">N/A</span></p>
+      </section>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Kevin Akamunyereka | Uganda</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+@media only screen and (min-width: 40rem) {
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .weather-icon {
+    display: none;
+  }
+
+  .weather h2::after {
+    content: " ⛅";
+    margin-left: 0.5rem;
+  }
+
+}
