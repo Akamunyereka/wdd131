@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Product Review Form for WDD 131. Users can submit product reviews with ratings, installation date, and feedback.">
+  <meta name="author" content="Kevin Akamunyereka">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form | WDD 131</title>
+  <link rel="stylesheet" href="styles/form.css">
+  <script defer src="scripts/form.js"></script>
+</head>
+<body>
+  <header>
+    <div class="branding">
+      <p class="site-title">Product Review Form</p>
+    </div>
+
+    <nav>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="review.html">Reviews</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Dynamic Web Fundamentals</h1>
+
+    <section class="intro">
+      <h2>Product Review Form</h2>
+      <p> Please fill out the form below to submit your product review. Your feedback is valuable and helps others make informed decisions. </p>
+    </section>
+
+    <form method="get" action="review.html" class="review-form">
+      <!-- Product Name -->
+      <div class="form-group">
+        <label for="product">Product Name <span class="required">*</span></label>
+        <select id="product" name="product" required>
+          <option value="" disabled selected>Select a Product ...</option>
+          <!-- Options populated by JavaScript -->
+        </select>
+      </div>
+
+      <!-- Overall Rating -->
+      <fieldset class="form-group">
+        <legend>Overall Rating <span class="required">*</span></legend>
+        <div class="rating-group">
+          <label>
+            <input type="radio" name="rating" id="rating1" value="1" required>
+            ★☆☆☆☆
+          </label>
+          <label>
+            <input type="radio" name="rating" id="rating2" value="2">
+            ★★☆☆☆
+          </label>
+          <label>
+            <input type="radio" name="rating" id="rating3" value="3">
+            ★★★☆☆
+          </label>
+          <label>
+            <input type="radio" name="rating" id="rating4" value="4">
+            ★★★★☆
+          </label>
+          <label>
+            <input type="radio" name="rating" id="rating5" value="5">
+            ★★★★★
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Date of Installation -->
+      <div class="form-group">
+        <label for="installDate">Date of Installation <span class="required">*</span></label>
+        <input type="date" id="installDate" name="installDate" required>
+      </div>
+
+      <!-- Useful Features -->
+      <fieldset class="form-group">
+        <legend>Useful Features</legend>
+        <label>
+          <input type="checkbox" id="feature1" name="features" value="ease-of-use">
+          Ease of Use
+        </label>
+        <label>
+          <input type="checkbox" id="feature2" name="features" value="performance">
+          Performance
+        </label>
+        <label>
+          <input type="checkbox" id="feature3" name="features" value="design">
+          Design
+        </label>
+        <label>
+          <input type="checkbox" id="feature4" name="features" value="durability">
+          Durability
+        </label>
+      </fieldset>
+
+      <!-- Written Review -->
+      <div class="form-group">
+        <label for="review">Written Review</label>
+        <textarea id="review" name="review" rows="4" placeholder="Write your review here..."></textarea>
+      </div>
+
+      <!-- User Name -->
+      <div class="form-group">
+        <label for="username">Your Name</label>
+        <input type="text" id="username" name="username" placeholder="Optional">
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <input type="submit" value="Submit Review">
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p id="copyright"></p>
+    <p id="lastModified"></p>
+    <p>Copyright © Akamunyereka | All rights reserved</p>
+  </footer>
+</body>
+</html>

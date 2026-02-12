@@ -1,0 +1,202 @@
+/* ========== Base Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== Typography & Layout ========== */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f7f9fb;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* ========== Header ========== */
+header {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.branding img {
+  width: 60px;
+}
+
+.site-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ========== Navigation ========== */
+nav {
+  margin-top: 1rem;
+}
+
+nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  justify-content: center;
+}
+
+.navigation a {
+  background-color: #ffffff;
+  color: #003366;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+  background-color: #0055a5;
+  color: #ffffff;
+}
+
+/* ========== Main Content ========== */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+main h1 {
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  margin-bottom: 1.5rem;
+}
+
+.intro h2 {
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+/* ========== Form Styles ========== */
+.review-form {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label,
+fieldset legend {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid #cccccc;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0055a5;
+}
+
+fieldset {
+  border: 1px solid #cccccc;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+.rating-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.rating-group label {
+  cursor: pointer;
+}
+
+.required {
+  color: #b00020;
+}
+
+/* ========== Submit Button ========== */
+.form-group input[type="submit"] {
+  background-color: #003366;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.4rem;
+  transition: background-color 0.2s ease;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #0055a5;
+}
+
+/* ========== Confirmation Page Button Link ========== */
+.button-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #003366;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.4rem;
+  font-weight: 600;
+}
+
+.button-link:hover {
+  background-color: #0055a5;
+}
+
+/* ========== Footer ========== */
+footer {
+  background-color: #003366;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: 3rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+/* ========== Responsive Enhancements ========== */
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .branding {
+    justify-content: center;
+  }
+}
