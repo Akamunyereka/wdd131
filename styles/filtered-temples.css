@@ -1,0 +1,157 @@
+/* ========== Base Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== Typography ========== */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f7f9fb;
+  color: #1a1a1a;
+}
+
+/* ========== Header ========== */
+header {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.branding img {
+  width: 60px;
+  height: auto;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* ========== Navigation ========== */
+nav {
+  margin-top: 1rem;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.navigation button {
+  background-color: #ffffff;
+  color: #003366;
+  border: 2px solid #ffffff;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navigation button:hover,
+.navigation button:focus {
+  background-color: #0055a5;
+  color: #ffffff;
+  outline: none;
+}
+
+/* ========== Main Content ========== */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.intro {
+  margin-bottom: 2rem;
+}
+
+.intro h2 {
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+/* ========== Temple Grid ========== */
+.temple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ========== Temple Card ========== */
+.temple-card {
+  background-color: #ffffff;
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.temple-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.temple-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.temple-card .card-content {
+  padding: 1rem;
+}
+
+.temple-card h3 {
+  color: #003366;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.temple-card p {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* ========== Footer ========== */
+footer {
+  background-color: #003366;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: 3rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+/* ========== Responsive Enhancements ========== */
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .branding {
+    justify-content: center;
+  }
+
+  nav {
+    margin-top: 0.75rem;
+  }
+}
