@@ -31,8 +31,9 @@ header {
   height: auto;
 }
 
-header h1 {
+.site-title {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 /* ========== Navigation ========== */
@@ -40,26 +41,28 @@ nav {
   margin-top: 1rem;
 }
 
-.navigation {
+nav > ul {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   list-style: none;
+  padding: 0;
+  justify-content: center;
 }
 
-.navigation button {
+.navigation a {
   background-color: #ffffff;
   color: #003366;
+  text-decoration: none;
   border: 2px solid #ffffff;
   padding: 0.5rem 1rem;
   font-weight: 600;
   border-radius: 0.4rem;
-  cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.navigation button:hover,
-.navigation button:focus {
+.navigation a:hover,
+.navigation a:focus {
   background-color: #0055a5;
   color: #ffffff;
   outline: none;
@@ -70,6 +73,11 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1.5rem;
+}
+
+main h1 {
+  color: #003366;
+  margin-bottom: 1rem;
 }
 
 .intro {
