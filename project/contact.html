@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact Campus Fitness Hub.">
+<title>Contact | Campus Fitness Hub</title>
+<link rel="stylesheet" href="styles/style.css">
+<script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+<header>
+<h1>Campus Fitness Hub</h1>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="workouts.html">Workouts</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<h2>Contact a Fitness Coach</h2>
+
+<form id="contactForm">
+<label for="name">Full Name</label>
+<input type="text" id="name" name="name" required>
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email" required>
+
+<label for="goal">Fitness Goal</label>
+<select id="goal" name="goal" required>
+<option value="">Select Goal</option>
+<option value="weight-loss">Weight Loss</option>
+<option value="muscle-gain">Muscle Gain</option>
+<option value="general-fitness">General Fitness</option>
+</select>
+
+<label for="message">Message</label>
+<textarea id="message" name="message" required></textarea>
+
+<button type="submit">Submit</button>
+</form>
+
+<p id="formResponse"></p>
+
+</main>
+
+<footer>
+<p>&copy; <span id="year"></span> Campus Fitness Hub</p>
+<a href="references.html">References</a>
+</footer>
+</body>
+</html>
